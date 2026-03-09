@@ -32,14 +32,36 @@ const StudentPage=()=>{
     id: 10, name: 'Javier', course: 'BSIT' 
 }
     ];
-function students(){
+
     useEffect(()=>{
         console.log("student list is now LOADED!", studentData);
     }, []);
-}
+
     return(
         <>
+        <div classname="p-2">
+            <h3>Student List</h3>
+            <table classname="table table-striped table border">
+            <thead classname="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Course</th>
+                </tr>
+            </thead>
+            <tbody>
+            {studentData.map(student=>(
+                <tr key={student.id}>
+                    <td>{student.id}</td>
+                    <td>{student.name}</td>
+                    <td>{student.course}</td>
+                </tr>    
+                ))
+            }
+            </tbody>
+            </table>
         
+        </div>
         </>
     );
 }
