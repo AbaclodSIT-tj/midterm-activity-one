@@ -15,10 +15,7 @@ function App() {
   <p>This app demonstrates React Router, useState, and useEffect.</p>
   </div>
     <nav>
-      <Link to="/">Home</Link> |
-        <Link to="/About">About</Link> |
-        <Link to="/StudentDetails">Student Details</Link> |
-        <Link to="/StudentPage">Student Page</Link> |
+    | <Link to="/">Home</Link> | <Link to="/About">About</Link> | <Link to="/StudentDetails">Student Details</Link> | <Link to="/StudentPage">Student Page</Link> |
     </nav>
     <Routes>
     <Route path="/" element={<Home/>}/>
